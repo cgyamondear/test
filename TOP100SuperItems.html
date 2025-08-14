@@ -1,184 +1,240 @@
 <!DOCTYPE html>
-<html lang="zh-CN"> <head> <meta charset="utf-8"/> <meta content="width=device-width, initial-scale=1.0" name="viewport"/> <title>
-TOP100超级单品
-</title> <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&amp;display=swap" rel="stylesheet"/> <style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-font-family: 'Noto Sans SC', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-line-height: 1.6;
-background-color: #f8f9fa;
-color: #343a40;
-}
-.container {
-max-width: 100%;
-margin: 0;
-padding: 5px;
-}
-header {
-text-align: center;
-background: linear-gradient(135deg, #232f3e, #37475a);
-color: white;
-padding: 1px 0;
-margin-bottom: 1px;
-box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-h5 {
-text-align: center;
-font-size: 2rem;
-font-weight: 700;
-letter-spacing: 0.5px;
-}
-.nav-bar {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 10px;
-padding: 1px;
-background: white;
-margin-bottom: 2px;
-border-radius: 10px;
-box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-position: sticky;
-top: 1px;
-z-index: 100;
-}
-.visualization-section {
-margin-bottom: 50px;
-background: white;
-border-radius: 12px;
-box-shadow: 0 7px 20px rgba(0,0,0,0.08);
-overflow: hidden;
-border: 1px solid #e9ecef;
-display: none;
-}
-.section-header {
-padding: 2px 2px;
-background: #f8f9fa;
-border-bottom: 1px solid #e9ecef;
-}
-.section-title {
-color: #232f3e;
-font-size: 1.2rem;
-display: flex;
-align-items: center;
-gap: 12px;
-}
-.section-title .index {
-background: #ff9900;
-color: white;
-width: 26px;
-height: 26px;
-border-radius: 50%;
-display: flex;
-align-items: center;
-justify-content: center;
-font-weight: bold;
-font-size: 1.2rem;
-}
-.iframe-container {
-width: 100%;
-height: 750px;
-overflow: auto;
-border: none;
-}
-iframe {
-width: 100%;
-height: 100%;
-border: none;
-display: block;
-}.stats {
-display: flex;
-justify-content: center;
-gap: 30px;
-margin-top: 15px;
-flex-wrap: wrap;
-}
-.stat-box {
-background: white;
-padding: 15px 25px;
-border-radius: 8px;
-box-shadow: 0 3px 8px rgba(0,0,0,0.05);
-min-width: 200px;
-}
-.stat-value {
-font-size: 1.8rem;
-font-weight: 700;
-color: #ff9900;
-margin-top: 5px;
-}
-/* 下拉选择框样式 */
-.report-selector {
-width: 100%;
-max-width: 800px;
-padding: 12px 16px;
-font-size: 16px;
-border: 1px solid #ddd;
-border-radius: 8px;
-background-color: white;
-box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-appearance: none;
-background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-background-repeat: no-repeat;
-background-position: right 16px center;
-background-size: 16px;
-cursor: pointer;
-font-family: 'Noto Sans SC', sans-serif;
-transition: all 0.3s ease;
-}
-.report-selector:focus {
-outline: none;
-border-color: #ff9900;
-box-shadow: 0 0 0 3px rgba(255, 153, 0, 0.2);
-}
-.report-selector:hover {
-border-color: #aaa;
-}
-@media (max-width: 768px) {
-.iframe-container {
-height: 700px;
-}
-.stats {
-gap: 15px;
-}
-.stat-box {
-min-width: 45%;
-padding: 12px;
-}
-.report-selector {
-padding: 10px 14px;
-font-size: 14px;
-}
-}
-</style> </head> <body> <header> <div class="container"> <h5>
-TOP100超级单品
-</h5> <a href="https://wasdkd.github.io/Amazon/AmazonDigitsPlatform"> <button style="
-padding: 3px 8px;
-margin-right: 10px;
-border: none;
-border-radius: 6px;
-background-color: #007BFF;
-color: white;
-font-size: 15px;
-cursor: pointer;
-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-transition: background-color 0.3s ease, transform 0.2s ease;
-">
-返回平台
-</button> </a> </div> </header> <div class="container"> <div class="nav-bar" id="navBar"> <select class="report-selector" id="reportSelector"> <option value="">
-请选择要查看的报告(周度)...
-</option> <option value="report-1">
-1. TOP100--0804-0811
-</option> <option value="report-2">
-2. TOP100--0728-0804
-</option> </select> </div> <div id="visualizationsContainer"> <div class="visualization-section"> <div class="section-header"> <h2 class="section-title"> <span class="index">
-1
-</span> <span>
-TOP100--0804-0811
-</span> </h2> </div> <div class="iframe-container"> <iframe sandbox="allow-scripts allow-same-origin allow-top-navigation allow-popups allow-popups-to-escape-sandbox" src="D:\桌面\2025_07_14_合并可视化图表\测试\TOP100product_0804-0811.html"> </iframe> </div> </div> <div class="visualization-section"> <div class="section-header"> <h2 class="section-title"> <span class="index">
-2
-</span> <span>
-TOP100--0728-0804
-</span> </h2> </div> <div class="iframe-container"> <iframe sandbox="allow-scripts allow-same-origin allow-top-navigation allow-popups allow-popups-to-escape-sandbox" src="D:\桌面\2025_07_14_合并可视化图表\测试\TOP100product_0728-0804.html"> </iframe> </div> </div> </div> </div><script>
+<html lang="zh-CN">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   TOP100超级单品
+  </title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   * { box-sizing: border-box; margin: 0; padding: 0; }
+            body {
+                font-family: 'Noto Sans SC', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                line-height: 1.6;
+                background-color: #f8f9fa;
+                color: #343a40;
+            }
+            .container {
+                max-width: 100%;
+                margin: 0;
+                padding: 5px;
+            }
+            header {
+                text-align: center;
+                background: linear-gradient(135deg, #232f3e, #37475a);
+                color: white;
+                padding: 1px 0;
+                margin-bottom: 1px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            }
+            h5 {
+                text-align: center;
+                font-size: 2rem;
+                font-weight: 700;
+                letter-spacing: 0.5px;
+            }
+            .nav-bar {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+                padding: 1px;
+                background: white;
+                margin-bottom: 2px;
+                border-radius: 10px;
+                box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+                position: sticky;
+                top: 1px;
+                z-index: 100;
+            }
+            .visualization-section {
+                margin-bottom: 50px;
+                background: white;
+                border-radius: 12px;
+                box-shadow: 0 7px 20px rgba(0,0,0,0.08);
+                overflow: hidden;
+                border: 1px solid #e9ecef;
+                display: none;
+            }
+            .section-header {
+                padding: 2px 2px;
+                background: #f8f9fa;
+                border-bottom: 1px solid #e9ecef;
+            }
+            .section-title {
+                color: #232f3e;
+                font-size: 1.2rem;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+            }
+            .section-title .index {
+                background: #ff9900;
+                color: white;
+                width: 26px;
+                height: 26px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+                font-size: 1.2rem;
+            }
+            .iframe-container {
+                width: 100%;
+                height: 750px;
+                overflow: auto;
+                border: none;
+            }
+            iframe {
+                width: 100%;
+                height: 100%;
+                border: none;
+                display: block;
+            }
+
+            .stats {
+                display: flex;
+                justify-content: center;
+                gap: 30px;
+                margin-top: 15px;
+                flex-wrap: wrap;
+            }
+            .stat-box {
+                background: white;
+                padding: 15px 25px;
+                border-radius: 8px;
+                box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+                min-width: 200px;
+            }
+            .stat-value {
+                font-size: 1.8rem;
+                font-weight: 700;
+                color: #ff9900;
+                margin-top: 5px;
+            }
+            /* 下拉选择框样式 */
+            .report-selector {
+                width: 100%;
+                max-width: 800px;
+                padding: 12px 16px;
+                font-size: 16px;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                background-color: white;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                appearance: none;
+                background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+                background-repeat: no-repeat;
+                background-position: right 16px center;
+                background-size: 16px;
+                cursor: pointer;
+                font-family: 'Noto Sans SC', sans-serif;
+                transition: all 0.3s ease;
+            }
+            .report-selector:focus {
+                outline: none;
+                border-color: #ff9900;
+                box-shadow: 0 0 0 3px rgba(255, 153, 0, 0.2);
+            }
+            .report-selector:hover {
+                border-color: #aaa;
+            }
+            @media (max-width: 768px) {
+                .iframe-container {
+                    height: 700px;
+                }
+                .stats {
+                    gap: 15px;
+                }
+                .stat-box {
+                    min-width: 45%;
+                    padding: 12px;
+                }
+                .report-selector {
+                    padding: 10px 14px;
+                    font-size: 14px;
+                }
+            }
+  </style>
+ </head>
+ <body>
+  <header>
+   <div class="container">
+    <h5>
+     TOP100超级单品
+    </h5>
+    <a href="https://wasdkd.github.io/Amazon/AmazonDigitsPlatform">
+     <button style="
+        padding: 3px 8px;
+        margin-right: 10px;
+        border: none;
+        border-radius: 6px;
+        background-color: #007BFF;
+        color: white;
+        font-size: 15px;
+        cursor: pointer;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    ">
+      返回平台
+     </button>
+    </a>
+   </div>
+  </header>
+  <div class="container">
+   <div class="nav-bar" id="navBar">
+    <!-- 下拉选择框将在这里添加 -->
+    <select class="report-selector" id="reportSelector">
+     <option value="">
+      请选择要查看的报告(周度)...
+     </option>
+     <option value="report-1">
+      1. TOP100--0804-0811
+     </option>
+     <option value="report-2">
+      2. TOP100--0728-0804
+     </option>
+    </select>
+   </div>
+   <div id="visualizationsContainer">
+    <!-- 可视化内容将在这里插入 -->
+    <div class="visualization-section">
+     <div class="section-header">
+      <h2 class="section-title">
+       <span class="index">
+        1
+       </span>
+       <span>
+        TOP100--0804-0811
+       </span>
+      </h2>
+     </div>
+     <div class="iframe-container">
+      <iframe sandbox="allow-scripts allow-same-origin allow-top-navigation allow-popups allow-popups-to-escape-sandbox" src="processed_TOP100product_0804-0811.html">
+      </iframe>
+     </div>
+    </div>
+    <div class="visualization-section">
+     <div class="section-header">
+      <h2 class="section-title">
+       <span class="index">
+        2
+       </span>
+       <span>
+        TOP100--0728-0804
+       </span>
+      </h2>
+     </div>
+     <div class="iframe-container">
+      <iframe sandbox="allow-scripts allow-same-origin allow-top-navigation allow-popups allow-popups-to-escape-sandbox" src="processed_TOP100product_0728-0804.html">
+      </iframe>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script>
    function navigateToReport(index) {
     const sections = document.querySelectorAll('.visualization-section');
     sections.forEach((section, i) => {
@@ -232,5 +288,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
-  </script></body>
+  </script>
+ </body>
 </html>

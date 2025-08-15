@@ -4,7 +4,7 @@
     // 配置信息
     const CONFIG = {
         // 正确的密码哈希值
-        correctHash: "c0db16a3e0cd1891b0a6101aece25deeaa480503166768f92c34e53b88311f3e",
+        correctHash: "4693df8d843460c7d8c04cf3d05c95ff767502e695b986bbd9dcaab4930efbeb",
 
         // 受保护的模块列表
         protectedModules: [

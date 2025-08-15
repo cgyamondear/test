@@ -20,7 +20,7 @@
         ],
 
         // 首页URL
-        homeUrl: 'https://wasdkd.github.io/Amazon/AmazonDigitsPlatform'
+        homeUrl: 'https:/cgyamondear/.github.io/Amazon'
     };
 
     // 检查当前URL是否指向受保护模块
@@ -151,4 +151,3 @@
     };
 })();
 
->>>>>>> 19fbb7db99485d4aa5ca27e19e5fa0ba56f093d7
